@@ -2,14 +2,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import {
-  Paintbrush,
-  MessageCircle,
-  TabletSmartphone,
-  BadgeCheck,
-  Goal,
-  PictureInPicture,
-  MousePointerClick,
-  Newspaper,
+  QrCode,
+  CreditCard,
+  Store,
+  CalendarClock,
+  BarChart3,
+  Scan,
+  Users,
+  ShieldCheck,
 } from "lucide-vue-next";
 
 interface FeaturesProps {
@@ -20,98 +20,75 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "tabletSmartphone",
-    title: "Mobile Friendly",
+    icon: "qrCode",
+    title: "QR Code Intelligent",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+      "Système de QR code unique pour identifier vos clients et gérer leurs abonnements en toute simplicité depuis votre ordinateur ou votre smartphone.",
   },
   {
-    icon: "badgeCheck",
-    title: "Social Proof",
+    icon: "creditCard",
+    title: "Paiements Sécurisés",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+      "Nous gérons les paiements pour vous, vous n'avez plus à vous soucier de la gestion des paiements, des litiges ou de la sécurité des paiements.",
   },
   {
-    icon: "goal",
-    title: "Targeted Content",
+    icon: "store",
+    title: "Multi-Commerce",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+      "Solution adaptée à tous types de commerces. Parmi nos clients : boulangeries, bars, instituts de beauté et bien plus encore.",
   },
   {
-    icon: "pictureInPicture",
-    title: "Strong Visuals",
+    icon: "calendarClock",
+    title: "Abonnements Flexibles",
     description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+      "Créez des formules personnalisées : par jour, par semaine, par mois, avec des restrictions horaires ou journalières.",
   },
   {
-    icon: "mousePointerClick",
-    title: "Clear CTA",
+    icon: "barChart3",
+    title: "Analyses Détaillées",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+      "Suivez vos performances, analysez les habitudes de vos clients et optimisez vos offres d'abonnement.",
   },
   {
-    icon: "newspaper",
-    title: "Clear Headline",
+    icon: "scan",
+    title: "Scan Instantané",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
+      "Interface de scan rapide et intuitive pour vérifier les droits d'accès de vos clients en temps réel.",
   },
 ];
 
-const iconMap: Record<
-  string,
-  | typeof TabletSmartphone
-  | typeof BadgeCheck
-  | typeof Goal
-  | typeof PictureInPicture
-  | typeof Paintbrush
-  | typeof MousePointerClick
-  | typeof MessageCircle
-  | typeof Newspaper
-> = {
-  tabletSmartphone: TabletSmartphone,
-  badgeCheck: BadgeCheck,
-  goal: Goal,
-  pictureInPicture: PictureInPicture,
-  paintbrush: Paintbrush,
-  mousePointerClick: MousePointerClick,
-  messageCircle: MessageCircle,
-  newspaper: Newspaper,
+const iconMap: Record<string, any> = {
+  qrCode: QrCode,
+  creditCard: CreditCard,
+  store: Store,
+  calendarClock: CalendarClock,
+  barChart3: BarChart3,
+  scan: Scan,
+  users: Users,
+  shieldCheck: ShieldCheck,
 };
 </script>
 
 <template>
-  <section
-    id="features"
-    class="container py-24 sm:py-32"
-  >
+  <section id="features" class="container py-24 sm:py-32">
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Features
+      Fonctionnalités
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      What Makes Us Different
+      Une solution complète pour Votre Commerce
     </h2>
 
     <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-      fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-      facere tenetur.
+      Créez vos formules d'abonnement, définissez vos règles et nous gérons le reste.
     </h3>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      <div
-        v-for="{ icon, title, description } in featureList"
-        :key="title"
-      >
+      <div v-for="{ icon, title, description } in featureList" :key="title">
         <Card class="h-full bg-background border-0 shadow-none">
           <CardHeader class="flex justify-center items-center">
-            <div
-              class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4"
-            >
-              <component
-                :is="iconMap[icon]"
-                class="size-6 text-primary"
-              />
+            <div class="bg-primary/20 p-2 rounded-full ring-8 ring-primary/10 mb-4">
+              <component :is="iconMap[icon]" class="size-6 text-primary" />
             </div>
 
             <CardTitle>

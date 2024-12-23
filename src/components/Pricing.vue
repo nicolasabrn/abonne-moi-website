@@ -27,48 +27,48 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
+    title: "Starter",
     popular: 0,
-    price: 0,
+    price: 29,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "Idéal pour les petits commerces qui débutent avec les abonnements.",
+    buttonText: "Commencer gratuitement",
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+      "Jusqu'à 50 abonnés",
+      "QR Code illimités",
+      "Interface de scan",
+      "Paiements Stripe",
+      "Support par email",
     ],
   },
   {
-    title: "Premium",
+    title: "Pro",
     popular: 1,
-    price: 45,
+    price: 79,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+      "Pour les commerces qui veulent développer leur base d'abonnés.",
+    buttonText: "Essai gratuit de 14 jours",
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      "Abonnés illimités",
+      "Formules personnalisées",
+      "Analyses avancées",
+      "Support prioritaire",
+      "Multi-points de vente",
     ],
   },
   {
-    title: "Enterprise",
+    title: "Entreprise",
     popular: 0,
-    price: 120,
+    price: 199,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Solution sur mesure pour les grandes enseignes et franchises.",
+    buttonText: "Contactez-nous",
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      "Tout du plan Pro",
+      "API personnalisée",
+      "Intégration CRM",
+      "Support dédié 24/7",
+      "Formation équipe",
     ],
   },
 ];
@@ -77,35 +77,29 @@ const plans: PlanProps[] = [
 <template>
   <section class="container py-24 sm:py-32">
     <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-      Pricing
+      Tarifs
     </h2>
 
     <h2 class="text-3xl md:text-4xl text-center font-bold mb-4">
-      Get unlimitted access
+      Une offre adaptée à chaque commerce
     </h2>
 
-    <h3
-      class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14"
-    >
-      Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+    <h3 class="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
+      Commencez gratuitement et évoluez avec nous. Commission de 5% sur les transactions.
     </h3>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
-      <Card
-        v-for="{
-          title,
-          popular,
-          price,
-          description,
-          buttonText,
-          benefitList,
-        } in plans"
-        :key="title"
-        :class="{
-          'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]':
-            popular === PopularPlan?.YES,
-        }"
-      >
+      <Card v-for="{
+        title,
+        popular,
+        price,
+        description,
+        buttonText,
+        benefitList,
+      } in plans" :key="title" :class="{
+        'drop-shadow-xl shadow-black/10 dark:shadow-white/10 border-[1.5px] border-primary lg:scale-[1.1]':
+          popular === PopularPlan?.YES,
+      }">
         <CardHeader>
           <CardTitle class="pb-2">
             {{ title }}
@@ -114,18 +108,14 @@ const plans: PlanProps[] = [
           <CardDescription class="pb-4">{{ description }}</CardDescription>
 
           <div>
-            <span class="text-3xl font-bold">${{ price }}</span>
-            <span class="text-muted-foreground"> /month</span>
+            <span class="text-3xl font-bold">{{ price }}€</span>
+            <span class="text-muted-foreground"> /mois</span>
           </div>
         </CardHeader>
 
         <CardContent class="flex">
           <div class="space-y-4">
-            <span
-              v-for="benefit in benefitList"
-              :key="benefit"
-              class="flex"
-            >
+            <span v-for="benefit in benefitList" :key="benefit" class="flex">
               <Check class="text-primary mr-2" />
               <h3>{{ benefit }}</h3>
             </span>
@@ -133,10 +123,7 @@ const plans: PlanProps[] = [
         </CardContent>
 
         <CardFooter>
-          <Button
-            :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'"
-            class="w-full"
-          >
+          <Button :variant="popular === PopularPlan?.NO ? 'secondary' : 'default'" class="w-full">
             {{ buttonText }}
           </Button>
         </CardFooter>

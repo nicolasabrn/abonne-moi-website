@@ -11,92 +11,79 @@ interface HowItWorksProps {
 
 const HowItWorksList: HowItWorksProps[] = [
   {
-    badgeTitle: "Contribute",
-    title: "Make a Difference with Every Contribution",
+    badgeTitle: "Étape 1",
+    title: "Créez vos formules",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
-    image: "roboto.png",
+      "Définissez vos formules d'abonnement selon vos besoins : quotidien, hebdomadaire, mensuel... Ajoutez des restrictions horaires ou journalières pour une flexibilité totale.",
+    image: "create-sub.png",
   },
   {
-    badgeTitle: "Discover",
-    title: "Create an Impact with Every Choice",
+    badgeTitle: "Étape 2",
+    title: "Proposez vos abonnements",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, sint reiciendis quidem iure veritatis optio facere tenetur.",
-    image: "runner.png",
+      "Partagez vos formules d'abonnement directement en boutique ou intégrez-les à votre site internet. Nous gérons automatiquement les paiements via Stripe.",
+    image: "sell-subs.png",
   },
   {
-    badgeTitle: "Innovate",
-    title: "Make Every Action Count",
+    badgeTitle: "Étape 3",
+    title: "Vos clients s'abonnent",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, odit similique quasi sint.",
-    image: "pacheco.png",
+      "Vos clients choisissent leur formule et reçoivent instantanément leur QR code personnel. Plus besoin de carte de fidélité physique !",
+    image: "payment.png",
   },
   {
-    badgeTitle: "Collaborate",
-    title: "Tackle this challenge together",
+    badgeTitle: "Étape 4",
+    title: "Scannez et validez",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem fugiat, quasi sint reiciendis quidem iure.",
-    image: "gamestation.png",
+      "À chaque visite, scannez simplement le QR code de vos clients. Notre application vérifie instantanément leurs droits et décompte automatiquement leur utilisation.",
+    image: "scan.png",
   },
 ];
 </script>
 
 <template>
-  <section
-    id="features"
-    class="container py-24 sm:py-32"
-  >
-    <div class="text-center mb-8">
+  <section id="how-it-works" class="container py-24 sm:py-32">
+    <div class="text-center mb-12">
       <h2 class="text-lg text-primary text-center mb-2 tracking-wider">
-        How It Works
+        Comment ça marche
       </h2>
 
       <h2 class="text-3xl md:text-4xl text-center font-bold">
-        Step-by-Step Process
+        Simple pour vous, simple pour vos clients
       </h2>
     </div>
 
     <div class="lg:w-[80%] mx-auto relative">
-      <div
-        v-for="(
-          { badgeTitle, title, description, image }, index
-        ) in HowItWorksList"
-        :key="title"
-        :class="[
-          'flex mb-8 items-center',
-          { ' flex-row-reverse': index % 2 !== 0 },
-        ]"
-      >
-        <Card class="h-full bg-transparent border-0 shadow-none">
+      <div v-for="({ badgeTitle, title, description, image }, index) in HowItWorksList" :key="title"
+        :class="['flex mb-16 items-center gap-8', { 'flex-row-reverse': index % 2 !== 0 }]">
+        <Card class="flex-1 bg-muted/50 dark:bg-card">
           <CardHeader>
             <div class="pb-4">
-              <Badge>{{ badgeTitle }}</Badge>
+              <Badge variant="default" class="text-base py-1 px-4">{{ badgeTitle }}</Badge>
             </div>
 
-            <CardTitle>
+            <CardTitle class="text-2xl">
               {{ title }}
             </CardTitle>
           </CardHeader>
 
-          <CardContent class="text-muted-foreground w-[80%]">
+          <CardContent class="text-muted-foreground text-lg">
             {{ description }}
           </CardContent>
         </Card>
 
-        <img
-          :src="image"
-          :alt="`Image describing ${title} `"
-          className="w-[150px]  md:w-[250px] lg:w-[300px] mx-auto -scale-x-100 "
-        />
-        <div
-          :class="[
-            '-z-10 absolute right-0 w-44 h-72  lg:w-64 lg:h-80 rounded-full bg-primary/15 dark:bg-primary/10 blur-3xl',
-            {
-              'left-0': index % 2 !== 0,
-            },
-          ]"
-        ></div>
+        <div class="flex-1 relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/5 rounded-full blur-3xl"></div>
+          <img :src="image" :alt="`${title}`" class="relative w-full max-w-[300px] mx-auto rounded-sm" />
+        </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.gradient-blur {
+  filter: blur(100px);
+  transform: translateZ(0);
+}
+</style>
