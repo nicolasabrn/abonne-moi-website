@@ -40,26 +40,32 @@ import Separator from "./ui/separator/Separator.vue";
           </div>
         </div>
 
-        <!-- <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Ressources</h3>
           <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
-              Guide d'utilisation
-            </a>
-          </div>
-
-          <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
-              API Documentation
-            </a>
-          </div>
-
-          <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
+            <a href="/blog" class="opacity-60 hover:opacity-100">
               Blog
             </a>
           </div>
-        </div> -->
+
+          <div>
+            <a href="/blog/abonnements-pour-les-boulangeries" class="opacity-60 hover:opacity-100">
+              Boulangeries
+            </a>
+          </div>
+
+          <div>
+            <a href="/blog/abonnements-pour-les-cavistes" class="opacity-60 hover:opacity-100">
+              Cavistes
+            </a>
+          </div>
+
+          <div>
+            <a href="/blog/abonnements-pour-les-coiffeurs-et-salons-de-coiffures" class="opacity-60 hover:opacity-100">
+              Coiffeurs
+            </a>
+          </div>
+        </div>
 
         <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Support</h3>
