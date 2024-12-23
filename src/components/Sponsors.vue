@@ -142,7 +142,7 @@ const iconMap: Record<string, any> = {
   <section id="clients" class="max-w-[90%] mx-auto pb-24 sm:pb-32">
     <h2 class="text-lg md:text-xl text-center mb-2 text-primary tracking-wider">Ils nous font confiance</h2>
     <h3 class="text-3xl md:text-4xl text-center font-bold mb-12">
-      Rejoignez plus de 200 commerces
+      Rejoignez plus de 50 commerces
     </h3>
 
     <div class="mx-auto">

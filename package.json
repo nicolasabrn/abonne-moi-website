@@ -27,12 +27,15 @@
   "dependencies": {
     "@selemondev/vue3-marquee": "^0.0.8",
     "@vee-validate/zod": "^4.13.2",
-    "@vueuse/core": "^11.1.0",
+    "@vueuse/core": "^11.3.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel": "^8.3.0",
     "embla-carousel-vue": "^8.3.0",
+    "front-matter": "^4.0.2",
+    "frontmatter-markdown-loader": "^3.7.0",
     "lucide-vue-next": "^0.452.0",
+    "marked": "^15.0.4",
     "radix-vue": "^1.9.7",
     "tailwind-merge": "^2.5.3",
     "tailwindcss-animate": "^1.0.7",
@@ -42,10 +45,11 @@
     "zod": "^3.23.8"
   },
   "optionalDependencies": {
+    "@rollup/rollup-darwin-arm64": "4.6.1",
     "@rollup/rollup-linux-x64-gnu": "4.6.1"
   },
   "devDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "^4.6.1",
+    "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^20.14.5",
     "@vitejs/plugin-vue": "^5.0.5",
     "autoprefixer": "^10.4.19",
