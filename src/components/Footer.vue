@@ -40,7 +40,7 @@ import Separator from "./ui/separator/Separator.vue";
           </div>
         </div>
 
-        <div class="flex flex-col gap-2">
+        <!-- <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Ressources</h3>
           <div>
             <a href="#" class="opacity-60 hover:opacity-100">
@@ -59,49 +59,18 @@ import Separator from "./ui/separator/Separator.vue";
               Blog
             </a>
           </div>
-        </div>
+        </div> -->
 
         <div class="flex flex-col gap-2">
           <h3 class="font-bold text-lg">Support</h3>
           <div>
-            <a href="#contact" class="opacity-60 hover:opacity-100">
+            <a href="mailto:tech@abonne-moi.com" class="opacity-60 hover:opacity-100">
               Contact
             </a>
           </div>
-
-          <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
-              Centre d'aide
-            </a>
-          </div>
-
-          <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
-              Status
-            </a>
-          </div>
         </div>
 
-        <div class="flex flex-col gap-2">
-          <h3 class="font-bold text-lg">Légal</h3>
-          <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
-              Confidentialité
-            </a>
-          </div>
-
-          <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
-              CGU
-            </a>
-          </div>
-
-          <div>
-            <a href="#" class="opacity-60 hover:opacity-100">
-              RGPD
-            </a>
-          </div>
-        </div>
+        <!-- End of grid columns -->
       </div>
 
       <Separator class="my-6" />
