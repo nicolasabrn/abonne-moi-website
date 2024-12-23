@@ -19,7 +19,7 @@ const benefitList: BenefitsProps[] = [
     icon: "wallet",
     title: "Revenu Récurrent Garanti",
     description:
-      "Convertissez vos clients en abonnés et sécurisez un revenu mensuel prévisible.",
+      "Convertissez vos clients en abonnés et sécurisez un revenu récurrent prévisible.",
   },
   {
     icon: "trendingUp",
@@ -29,9 +29,9 @@ const benefitList: BenefitsProps[] = [
   },
   {
     icon: "users",
-    title: "Fidélisation Naturelle",
+    title: "Fidélisation Renforcée",
     description:
-      "90% de renouvellement après 3 mois. Vos clients deviennent vos ambassadeurs.",
+      "Les abonnements créent une relation durable avec vos clients et encouragent les visites régulières.",
   },
   {
     icon: "calendarClock",
@@ -56,11 +56,11 @@ const iconMap: Record<string, any> = {
         <h2 class="text-lg text-primary mb-2 tracking-wider">Bénéfices</h2>
 
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Développez Votre Commerce avec les Abonnements
+          Augmentez vos revenus avec des abonnements en magasin
         </h2>
         <p class="text-xl text-muted-foreground mb-8">
-          Les commerces utilisant Abonne-moi constatent une augmentation moyenne de 30% de leur chiffre d'affaires après
-          6 mois d'utilisation.
+          Proposez à vos clients des offres d'abonnement personnalisées et encaissez leurs paiements mensuellement en
+          toute simplicité
         </p>
       </div>
 
