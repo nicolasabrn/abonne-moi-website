@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 import { useColorMode } from "@vueuse/core";
 const mode = useColorMode();
@@ -23,7 +24,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import { QrCode, Menu } from "lucide-vue-next";
+import { QrCode, Menu, XIcon } from "lucide-vue-next";
 import ToggleTheme from "./ToggleTheme.vue";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
@@ -76,6 +77,15 @@ const formData = ref({
 
 const isLoading = ref(false);
 const showForm = ref(false);
+
+const route = useRoute()
+const router = useRouter()
+
+watchEffect(() => {
+  if (route.query.showForm === 'true') {
+    showForm.value = true
+  }
+})
 
 function validatePhone(phone: string) {
   if (!phone) return true; // Vide est ok si l'email est rempli
@@ -133,6 +143,10 @@ async function handleSubmit() {
     showForm.value = false;
     formData.value = { name: '', industry: '', email: '', phone: '' };
 
+    if (route.query.showForm) {
+      router.replace({ query: { ...route.query, showForm: undefined } })
+    }
+
     toast({
       title: "Demande envoyée !",
       description: "Nous vous contacterons très prochainement."
@@ -145,6 +159,13 @@ async function handleSubmit() {
     });
   } finally {
     isLoading.value = false;
+  }
+}
+
+function closeForm() {
+  showForm.value = false
+  if (route.query.showForm) {
+    router.replace({ query: { ...route.query, showForm: undefined } })
   }
 }
 </script>
@@ -225,6 +246,12 @@ async function handleSubmit() {
         </Button>
 
         <Card v-if="showForm" class="absolute right-0 top-12 w-80 p-4 z-50">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="font-semibold">Inscription</h3>
+            <Button variant="ghost" size="icon" @click="closeForm">
+              <XIcon class="h-4 w-4" />
+            </Button>
+          </div>
           <form @submit.prevent="handleSubmit" class="space-y-4">
             <span class="text-sm text-muted-foreground mb-8">
               Nous créons les comptes clients avec vous pour vous aider à prendre en main l'outil. Laissez-nous

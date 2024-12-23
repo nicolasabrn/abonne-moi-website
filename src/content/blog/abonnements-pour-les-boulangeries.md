@@ -13,13 +13,9 @@ categories:
   - Marketing
 ---
 
-::ArticleTitle
-Pourquoi les Boulangeries devraient proposer des formules d'abonnement
-::
+<ArticleTitle text="Pourquoi les Boulangeries devraient proposer des formules d'abonnement" />
 
-::ArticleResume
-Dans un marché où la fidélisation des clients est essentielle, les abonnements sont devenus une stratégie précieuse pour garantir des revenus récurrents et une clientèle fidèle. C'est là que le micro-SaaS _Abonne-moi_ entre en jeu, permettant aux boulangeries et autres commerces de proximité de créer facilement des formules d'abonnement adaptées à leur clientèle. Aujourd'hui, découvrons comment les boulangeries peuvent bénéficier de ces abonnements.
-::
+<ArticleResume text="Dans un marché où la fidélisation des clients est essentielle, les abonnements sont devenus une stratégie précieuse pour garantir des revenus récurrents et une clientèle fidèle. C'est là que le micro-SaaS Abonne-moi entre en jeu, permettant aux boulangeries et autres commerces de proximité de créer facilement des formules d'abonnement adaptées à leur clientèle. Aujourd'hui, découvrons comment les boulangeries peuvent bénéficier de ces abonnements." />
 
 ## Les Avantages des Abonnements pour une Boulangerie
 
@@ -43,8 +39,15 @@ Avec _Abonne-moi_, une boulangerie peut définir ses abonnements avec une flexib
 
 Ces options permettent de s'adapter aux différents rythmes de vie de la clientèle, garantissant ainsi leur satisfaction et leur fidélité.
 
-::ArticleCta{:link="/inscription" :label="Lancez votre programme d'abonnement boulangerie" :description="Rejoignez les boulangeries qui fidélisent déjà leur clientèle avec Abonne-moi" :ctaLabel="Je me créé un compte" :icon="i-ph:qr-code" :secondaryLink="/#demo" :secondaryLabel="Découvrir Abonne-Moi en vidéo"}
-::
+<ArticleCta
+  link="?showForm=true"
+  label="Lancez votre programme d'abonnement boulangerie"
+  description="Rejoignez les boulangeries qui génèrent du revenu réccurent avec Abonne-moi"
+  ctaLabel="Je me créé un compte"
+  icon="i-ph:qr-code"
+  secondaryLink="/#demo"
+  secondaryLabel="Découvrir Abonne-Moi en vidéo"
+/>
 
 ## Comment Fixer le Prix de ses Abonnements pour Maximiser les Bénéfices
 
@@ -56,7 +59,7 @@ La formule déjeuner, quant à elle, pourrait être proposée à 30 euros pour 3
 
 Avec _Abonne-moi_, une boulangerie peut facilement lancer son programme d'abonnement. Voici comment :
 
-1. **Inscription et Association de Compte Stripe :** Après inscription sur _Abonne-moi_, la boulangerie lie son compte Stripe pour gérer les paiements.
+1. **Inscription et Association de Compte Bancaire :** Après inscription sur _Abonne-moi_, la boulangerie lie son compte bancaire pour gérer les paiements.
 2. **Création de Produits et Tarifs :** Elle crée l'abonnement "Baguette du jour" et le tarif correspondant. _Abonne-moi_ prélèvera une commission de 5 % sur chaque paiement.
 3. **Gestion des Clients et QR Codes :** Les clients abonnés reçoivent un QR code unique à présenter pour récupérer leurs produits.
 
@@ -75,11 +78,21 @@ Pour promouvoir ces abonnements, une boulangerie peut utiliser plusieurs straté
 
 ## Pourquoi Choisir Abonne-moi pour les Abonnements Boulangerie ?
 
-Contrairement aux autres solutions, _Abonne-moi_ est conçu pour les commerces de proximité. Son interface simple, la gestion des paiements via Stripe, et l'option de QR codes en font un choix idéal pour les boulangeries qui veulent offrir des abonnements sans complexité.
+Contrairement aux autres solutions, _Abonne-moi_ est conçu pour les commerces de proximité. Son interface simple, la gestion des paiements, et l'option de QR codes en font un choix idéal pour les boulangeries qui veulent offrir des abonnements sans complexité.
 
 ## Conclusion : L'Avenir des Boulangeries avec les Abonnements
 
 Les abonnements apportent non seulement une stabilité financière, mais aussi une fidélisation durable de la clientèle. Avec _Abonne-moi_, les boulangeries peuvent transformer une simple transaction en une relation de confiance avec leurs clients. Alors, pourquoi ne pas se lancer et découvrir tout ce qu'un abonnement peut apporter à votre boulangerie ?
+
+<ArticleCta
+  link="/?showForm=true"
+  label="Prêt à lancer vos abonnements ?"
+  description="Commencez dès aujourd'hui à fidéliser vos clients avec Abonne-moi"
+  ctaLabel="Créer mon compte gratuitement"
+  icon="i-ph:qr-code"
+  secondaryLink="/contact"
+  secondaryLabel="Contactez-nous"
+/>
 
 ## Exemples d'abonnements qu'il est possible de proposer dans sa boulangerie
 
@@ -94,7 +107,7 @@ Les abonnements apportent non seulement une stabilité financière, mais aussi u
 | Un sandwich par jour              | Quotidienne  | 35 €/mois      | _Le client se rendra donc en boutique chaque jour pour récupérer son sandwich._                           |
 | Un panier de produits sucrés      | Hebdomadaire | 25 €/mois      | _Le client se rendra en boutique une fois par semaine pour récupérer son panier de produits sucrés._      |
 | Un panier de produits salés       | Hebdomadaire | 25 €/mois      | _Le client se rendra en boutique une fois par semaine pour récupérer son panier de produits salés._       |
-| Un brunch dominical               | Quotidienne  | 30 €/mois      | _Le client se rendra donc en boutique chaque dimanche pour récupérer son brunch._                         |
+| Un brunch dominical               | Hebdomadaire | 30 €/mois      | _Le client se rendra donc en boutique chaque dimanche pour récupérer son brunch._                         |
 | Un goûter quotidien               | Quotidienne  | 20 €/mois      | _Le client se rendra donc en boutique chaque jour pour récupérer son goûter._                             |
 | Un panier de produits bio         | Hebdomadaire | 30 €/mois      | _Le client se rendra en boutique une fois par semaine pour récupérer son panier de produits bio._         |
 | Un panier de produits sans gluten | Hebdomadaire | 35 €/mois      | _Le client se rendra en boutique une fois par semaine pour récupérer son panier de produits sans gluten._ |
